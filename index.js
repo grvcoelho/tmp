@@ -1,3 +1,6 @@
+const cep = require('cep-promise')
+
 exports.handler = (event, context, callback) => {
-  callback(null, "hello tmp")
+  return Promise.resolve(01329010)
+    .then(result => callback(null, result))
 }
