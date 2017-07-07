@@ -19,3 +19,8 @@ environments:
     name: test
     functions:
       - cowsay
+
+  superbowleto:
+    name: superbowleto
+    functions:
+      - sandbox-superbowleto-migrate-database
