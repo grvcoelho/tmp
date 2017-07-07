@@ -1,0 +1,21 @@
+---
+
+scm:
+  type: git
+  repository: git@github.com:grvcoelho/tmp.git
+
+build:
+  type: rocker
+
+deploy:
+  type: lambda
+  s3_bucket: superbowleto-deploy-xc18
+  region: us-east-1
+  package:
+    - index.js
+
+environments:
+  test:
+    name: test
+    functions:
+      - cowsay
