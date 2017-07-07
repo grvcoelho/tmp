@@ -12,6 +12,7 @@ deploy:
   s3_bucket: superbowleto-deploy-xc18
   region: us-east-1
   package:
+    - node_modules
     - index.js
 
 environments:
