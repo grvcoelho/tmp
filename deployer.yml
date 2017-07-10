@@ -1,0 +1,27 @@
+---
+
+scm:
+  type: git
+  repository: git@github.com:grvcoelho/tmp.git
+
+build:
+  type: rocker
+
+deploy:
+  type: lambda
+  s3_bucket: superbowleto-deploy-xc18
+  region: us-east-1
+  package:
+    - node_modules
+    - index.js
+
+environments:
+  test:
+    name: test
+    functions:
+      - cowsay
+
+  superbowleto:
+    name: superbowleto
+    functions:
+      - sandbox-superbowleto-migrate-database
