@@ -12,8 +12,7 @@ deploy:
   s3_bucket: superbowleto-deploy-xc18
   region: us-east-1
   package:
-    - node_modules
-    - index.js
+    - handler.js
 
 environments:
   test:
@@ -24,4 +23,4 @@ environments:
   superbowleto:
     name: superbowleto
     functions:
-      - sandbox-superbowleto-migrate-database
+      - sandbox-superbowleto-cowsay
